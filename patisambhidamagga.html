@@ -361,6 +361,7 @@ article.pali .pali-clickable-text{
 </div>
 </div>
 <div class="reader-tools">
+<button onclick="openAtthakatha()">义註</button>
 <button onclick="gotoContents()">目录</button>
 <button id="bookmarkBtn" onclick="saveBookmark()">保存书签</button>
 <button onclick="gotoBookmark()">回到书签</button>
@@ -427,6 +428,25 @@ function gotoStored(key){
 function gotoBookmark(){gotoStored(BOOKMARK_KEY)}
 function gotoLast(){gotoStored(LAST_KEY)}
 function gotoContents(){document.getElementById('contents').scrollIntoView({block:'start'})}
+
+function atthakathaTargetForRowId(id){
+  let m;
+  if((m=/^matika-(\d+)$/.exec(id))) return 'matika-attha-'+m[1];
+  if((m=/^body-(\d+)-/.exec(id))) return 'sutamaya-attha-'+m[1];
+  if(id==='matika-summary'||id==='matika-end') return 'matika-attha-73';
+  if(id==='sutamaya-end') return 'sutamaya-attha-36';
+  return 'attha-contents';
+}
+function openAtthakatha(){
+  const row=nearestReadingRow();
+  const id=row ? row.id : 'body-1-p1';
+  if(row){
+    localStorage.setItem(LAST_KEY,id);
+    localStorage.setItem('patisambhidamagga_cross_pali_exact_v1',id);
+  }
+  const target=atthakathaTargetForRowId(id);
+  window.location.href='patisambhidamagga-atthakatha.html#'+encodeURIComponent(target);
+}
 
 let saveTimer=null;
 window.addEventListener('scroll',()=>{
