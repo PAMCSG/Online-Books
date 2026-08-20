@@ -6,236 +6,215 @@
 <title>PAMC Online Books / 帕奥禅修中心在线书籍</title>
 <style>
   :root{
-    --bg:#f3eee9;
     --paper:#fffdf9;
-    --ink:#302822;
-    --muted:#74665c;
+    --ink:#302a26;
     --brown:#a8734f;
-    --brown-dark:#7e5034;
-    --brown-soft:#efe1d5;
-    --line:#dcc9b9;
+    --brown-dark:#7f5134;
+    --line:#dfcbbb;
+    --muted:#75665d;
     --warning:#8a5a22;
     --warning-bg:#fff2d9;
   }
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
   body{
     margin:0;
-    background:var(--bg);
     color:var(--ink);
+    background:#f2eee9;
     font-family:Georgia,"Times New Roman",serif;
     line-height:1.6;
   }
-  .page{
-    width:min(1120px,calc(100% - 30px));
+  .wrap{
+    width:min(980px,calc(100% - 28px));
     margin:0 auto;
-    padding:42px 0 70px;
+    padding:36px 0 58px;
   }
-  .hero{
+  header{
     text-align:center;
-    padding:24px 20px 34px;
-  }
-  .hero h1{
-    margin:0;
-    font-size:clamp(34px,5vw,50px);
-    line-height:1.15;
-    color:#3b3029;
-  }
-  .hero .zh{
-    margin-top:8px;
-    font-family:"Microsoft YaHei","Noto Sans CJK SC","PingFang SC",sans-serif;
-    font-size:clamp(22px,3vw,30px);
-    font-weight:600;
-  }
-  .hero p{
-    max-width:760px;
-    margin:18px auto 0;
-    color:var(--muted);
-    font:16px/1.7 Arial,"Microsoft YaHei",sans-serif;
-  }
-  .section{
-    margin-top:22px;
-  }
-  .section-head{
-    padding:18px 22px;
-    border-radius:12px 12px 0 0;
-    background:var(--brown);
+    padding:18px 16px 20px;
+    background:var(--brown-dark);
+    border-radius:12px;
     color:#fff;
   }
-  .section-head h2{
+  h1{
     margin:0;
-    font-size:clamp(23px,3vw,31px);
-    line-height:1.3;
-  }
-  .section-head .zhline{
-    margin-top:5px;
-    font-family:"Microsoft YaHei","Noto Sans CJK SC","PingFang SC",sans-serif;
-    font-size:clamp(18px,2.4vw,23px);
+    color:#fff;
+    font-size:clamp(24px,3.2vw,31px);
+    line-height:1.25;
     font-weight:600;
   }
-  .section-note{
-    padding:14px 22px;
-    border:1px solid var(--line);
-    border-top:0;
-    background:#fbf7f3;
-    color:var(--muted);
-    font:14.5px/1.65 Arial,"Microsoft YaHei",sans-serif;
+  .main-zh{
+    font-family:"Microsoft YaHei","Noto Sans CJK SC","PingFang SC",sans-serif;
+    font-weight:600;
+  }
+  .intro{
+    margin:10px auto 0;
+    max-width:720px;
+    color:#f7eee7;
+    font:14.5px/1.6 Arial,"Microsoft YaHei",sans-serif;
+  }
+  .section{
+    margin-top:28px;
+  }
+  .section:first-of-type{
+    margin-top:8px;
+  }
+  .section-title{
+    margin:0 0 12px;
+    padding:9px 13px;
+    border:0;
+    border-radius:8px;
+    background:var(--brown);
+    color:#fff;
+    font-size:clamp(18px,2.2vw,21px);
+    line-height:1.35;
+    font-weight:600;
+  }
+  .section-title .zh{
+    font-family:"Microsoft YaHei","Noto Sans CJK SC","PingFang SC",sans-serif;
+    font-weight:600;
   }
   .grid{
     display:grid;
     grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:20px;
-    margin-top:20px;
+    gap:18px;
+  }
+  .grid.single{
+    grid-template-columns:minmax(0,1fr);
   }
   .book{
     display:flex;
     flex-direction:column;
-    min-height:315px;
-    padding:26px;
+    min-height:230px;
+    padding:22px;
     border:1px solid var(--line);
-    border-radius:14px;
+    border-radius:12px;
     background:var(--paper);
-    box-shadow:0 8px 24px rgba(59,44,34,.06);
+    box-shadow:0 6px 18px #0000000b;
   }
   .status{
     align-self:flex-start;
-    margin-bottom:18px;
-    padding:6px 10px;
-    border:1px solid #e5c58c;
+    margin-bottom:14px;
+    padding:5px 9px;
+    border:1px solid #e7c68c;
     border-radius:999px;
     background:var(--warning-bg);
     color:var(--warning);
-    font:700 12.5px/1.3 Arial,"Microsoft YaHei",sans-serif;
+    font:700 11.5px/1.25 Arial,"Microsoft YaHei",sans-serif;
   }
-  .book h3{
+  .book h2{
     margin:0;
-    color:#3b3029;
-    font-size:27px;
-    line-height:1.27;
+    color:#3b2f28;
+    font-size:clamp(21px,2.4vw,25px);
+    line-height:1.28;
+    font-weight:600;
   }
-  .book .pali{
+  .pali{
     font-family:"Times New Roman",Times,serif;
-    font-style:italic;
+    font-style:normal;
   }
   .book .cn{
-    margin-top:7px;
-    font:600 23px/1.42 "Microsoft YaHei","Noto Sans CJK SC","PingFang SC",sans-serif;
-    color:#3b3029;
+    margin-top:5px;
+    font:600 clamp(19px,2.2vw,22px)/1.4 "Microsoft YaHei","Noto Sans CJK SC","PingFang SC",sans-serif;
   }
-  .book .meta{
-    margin:16px 0 25px;
+  .desc{
+    margin:12px 0 20px;
     color:var(--muted);
-    font:15px/1.68 Arial,"Microsoft YaHei",sans-serif;
+    font:14.5px/1.6 Arial,"Microsoft YaHei",sans-serif;
   }
   .open{
     margin-top:auto;
     display:inline-flex;
-    justify-content:center;
     align-items:center;
-    min-height:48px;
-    padding:11px 16px;
-    border-radius:9px;
+    justify-content:center;
+    min-height:42px;
+    padding:9px 15px;
+    border-radius:8px;
     background:var(--brown);
     color:#fff;
     text-decoration:none;
-    font:700 15px/1.3 Arial,"Microsoft YaHei",sans-serif;
+    font:700 14px Arial,"Microsoft YaHei",sans-serif;
   }
-  .open:hover,.open:focus{background:var(--brown-dark)}
-  .secondary .section-head{background:#86634c}
-  .secondary .open{background:#86634c}
-  .secondary .open:hover,.secondary .open:focus{background:#674936}
+  .open:hover,.open:focus{
+    background:var(--brown-dark);
+  }
   footer{
-    margin-top:38px;
-    padding-top:20px;
-    border-top:1px solid var(--line);
+    margin-top:30px;
     text-align:center;
     color:var(--muted);
-    font:13.5px/1.65 Arial,"Microsoft YaHei",sans-serif;
+    font:12.5px/1.6 Arial,"Microsoft YaHei",sans-serif;
   }
-  @media(max-width:760px){
-    .page{width:min(100% - 20px,1120px);padding-top:22px}
-    .hero{padding:18px 8px 28px}
-    .grid{grid-template-columns:1fr}
-    .book{min-height:auto}
-    .section-head{padding:16px 17px}
-    .section-note{padding:12px 17px}
+  @media(max-width:720px){
+    .wrap{padding-top:20px}
+    header{padding:16px 8px 22px}
+    h1{font-size:23px}
+    .section{margin-top:24px}
+    .section-title{font-size:19px}
+    .grid,.grid.single{grid-template-columns:1fr}
+    .book{min-height:auto;padding:19px}
   }
 </style>
 </head>
 <body>
-<div class="page">
-  <header class="hero">
-    <h1>PAMC Online Books</h1>
-    <div class="zh">帕奥禅修中心在线书籍</div>
-    <p>
-      Digital reading editions for study and reference. The readers below are still being checked and refined.<br>
-      以下电子阅读版本供学习与参考，目前仍在制作、校对及完善中。
-    </p>
+<div class="wrap">
+  <header>
+    <h1>PAMC Online Books <span class="main-zh">帕奥禅修中心在线书籍</span></h1>
+    <div class="intro">
+      Digital reading editions currently being prepared and checked. / 以下电子阅读版本仍在制作及校对中。
+    </div>
   </header>
 
-  <section class="section secondary">
-    <div class="section-head">
-      <h2>Pāli Texts and Translation Readers</h2>
-      <div class="zhline">巴利圣典与译文阅读</div>
-    </div>
-    <div class="section-note">
-      Pāli source-text readers with available translations and related reading tools.<br>
-      巴利原典、译文及相关研读功能。
-    </div>
+  <main>
+    <section class="section">
+      <h2 class="section-title"><span class="pali">Pāli Tipiṭaka</span> Chinese Translation <span class="zh">汉译巴利三藏</span></h2>
+      <div class="grid single">
+        <article class="book">
+          <div class="status">Under construction — not final / 制作中 — 非最终版本</div>
+          <h2><span class="pali">Paṭisambhidāmagga</span></h2>
+          <div class="cn">《辨析道》</div>
+          <div class="desc">Pāli–Chinese parallel reader / 巴利文—中文对照阅读</div>
+          <a class="open" href="patisambhidamagga.html">Open Reader / 打开阅读器 →</a>
+        </article>
+      </div>
+    </section>
 
-    <div class="grid">
-      <article class="book">
-        <div class="status">Under construction — not final / 制作中 — 非最终版本</div>
-        <h3><span class="pali">Paṭisambhidāmagga</span></h3>
-        <div class="cn">《辨析道》</div>
-        <div class="meta">
-          Pāli–Chinese reading edition with linked study functions.<br>
-          巴利文—中文对照阅读及相关研读功能。
-        </div>
-        <a class="open" href="patisambhidamagga.html">Open Reader / 打开阅读器 →</a>
-      </article>
-    </div>
-  </section>
+    <section class="section">
+      <h2 class="section-title">Books by The Most Venerable Pa-Auk Tawya Sayadawgyi <span class="zh">帕奥西亚多吉书籍</span></h2>
+      <div class="grid">
+        <article class="book">
+          <div class="status">Under construction — not final / 制作中 — 非最终版本</div>
+          <h2>Mindfulness of Breathing <span class="pali">(Ānāpānassati)</span></h2>
+          <div class="cn">《入出息念》</div>
+          <div class="desc">English–Chinese reader with PCED dictionary / 英文—中文阅读及 PCED 词典</div>
+          <a class="open" href="mindfulness-of-breathing.html">Open Reader / 打开阅读器 →</a>
+        </article>
 
+        <article class="book">
+          <div class="status">Under construction — not final / 制作中 — 非最终版本</div>
+          <h2>The Only Way for the Realization of <span class="pali">Nibbāna</span></h2>
+          <div class="cn">《证悟涅槃的唯一之道》</div>
+          <div class="desc">English–Chinese reader with PCED dictionary / 英文—中文阅读及 PCED 词典</div>
+          <a class="open" href="the-only-way-for-realization-of-nibbana.html">Open Reader / 打开阅读器 →</a>
+        </article>
+      </div>
+    </section>
 
-  <section class="section">
-    <div class="section-head">
-      <h2>Books by The Most Venerable Pa-Auk Tawya Sayadawgyi</h2>
-      <div class="zhline">帕奥西亚多吉书籍</div>
-    </div>
-    <div class="section-note">
-      English and/or Chinese editions of teachings by The Most Venerable Pa-Auk Tawya Sayadawgyi.<br>
-      帕奥西亚多吉教导的英文及／或中文电子阅读版本。
-    </div>
-
-    <div class="grid">
-      <article class="book">
-        <div class="status">Under construction — not final / 制作中 — 非最终版本</div>
-        <h3>Mindfulness of Breathing <span class="pali">(Ānāpānassati)</span></h3>
-        <div class="cn">《入出息念》</div>
-        <div class="meta">
-          English–Chinese reader with multilingual PCED Pāli dictionary.<br>
-          英文—中文阅读器，附多语种 PCED 巴利词典。
-        </div>
-        <a class="open" href="mindfulness-of-breathing.html">Open Reader / 打开阅读器 →</a>
-      </article>
-
-      <article class="book">
-        <div class="status">Under construction — not final / 制作中 — 非最终版本</div>
-        <h3>The Only Way for the Realization of <span class="pali">Nibbāna</span></h3>
-        <div class="cn">《证悟涅槃的唯一之道》</div>
-        <div class="meta">
-          English–Chinese reader with multilingual PCED Pāli dictionary.<br>
-          英文—中文阅读器，附多语种 PCED 巴利词典。
-        </div>
-        <a class="open" href="the-only-way-for-realization-of-nibbana.html">Open Reader / 打开阅读器 →</a>
-      </article>
-    </div>
-  </section>
+    <section class="section">
+      <h2 class="section-title"><span class="pali">Pāli</span> Text &amp; <span class="pali">Aṭṭhakathā</span> Reading <span class="zh">巴利文与义注阅读</span></h2>
+      <div class="grid single">
+        <article class="book">
+          <div class="status">Under construction — not final / 制作中 — 非最终版本</div>
+          <h2><span class="pali">Pāli</span> Text &amp; <span class="pali">Aṭṭhakathā</span> Reading</h2>
+          <div class="cn">巴利文与义注阅读</div>
+          <div class="desc">Pāli text with PCED dictionary and Aṭṭhakathā reading support / 巴利文、PCED 词典及义注阅读</div>
+          <a class="open" href="pali-atthakatha-reading.html">Open Reader / 打开阅读器 →</a>
+        </article>
+      </div>
+    </section>
+  </main>
 
   <footer>
     Working review versions. Content and reader functions may continue to be checked and refined.<br>
-    当前均为审阅版本，内容及阅读功能仍可能继续校对与完善。
+    当前为审阅版本，内容及阅读功能仍可能继续校对与完善。
   </footer>
 </div>
 </body>
