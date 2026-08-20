@@ -1,74 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pāli with Aṭṭhakattha reading</title>
-<style>
-  :root{
-    --brown:#96613f;
-    --brown-dark:#6f452c;
-    --brown-light:#efe2d6;
-    --cream:#fffaf5;
-    --text:#2f2925;
-    --muted:#76685e;
-    --line:#decbbd;
-    --card:#ffffff;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--cream);color:var(--text)}
-  header{background:var(--brown);color:#fff;padding:28px 22px 24px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
-  .header-inner{max-width:900px;margin:0 auto}
-  h1{margin:0;font-size:clamp(28px,5vw,44px);line-height:1.15;font-weight:700;letter-spacing:.2px}
-  .subtitle{margin-top:8px;font-family:Arial,sans-serif;font-size:14px;opacity:.9}
-  main{max-width:900px;margin:0 auto;padding:28px 18px 50px}
-  .intro{font-family:Arial,sans-serif;font-size:15px;color:var(--muted);margin:0 0 20px}
-  .library{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 4px 18px rgba(73,45,27,.06)}
-  details{border-top:1px solid var(--line)}
-  details:first-child{border-top:0}
-  summary{list-style:none;cursor:pointer;user-select:none;padding:15px 18px;font-family:Arial,sans-serif;font-weight:700;display:flex;align-items:center;gap:10px;background:#fff}
-  summary::-webkit-details-marker{display:none}
-  summary::before{content:"▸";display:inline-block;width:16px;color:var(--brown);transition:transform .16s ease}
-  details[open]>summary::before{transform:rotate(90deg)}
-  details[open]>summary{background:#fcf6f0}
-  .level-1>summary{font-size:18px}
-  .level-2>summary{font-size:17px;padding-left:34px}
-  .level-3>summary{font-size:16px;padding-left:50px}
-  .entries{padding:6px 18px 14px 66px;background:#fffdfb}
-  .sutta-link{display:block;text-decoration:none;color:var(--brown-dark);font-size:18px;font-weight:700;padding:12px 14px;border:1px solid var(--line);border-radius:9px;background:#fff;transition:background .15s ease,transform .15s ease,box-shadow .15s ease}
-  .sutta-link:hover,.sutta-link:focus{background:var(--brown-light);transform:translateY(-1px);box-shadow:0 4px 12px rgba(73,45,27,.08);outline:none}
-  .meta{display:block;margin-top:4px;font-family:Arial,sans-serif;font-size:13px;font-weight:400;color:var(--muted)}
-  footer{max-width:900px;margin:0 auto;padding:0 18px 28px;font-family:Arial,sans-serif;font-size:12px;color:#8a7b70;text-align:center}
-  @media(max-width:600px){header{padding:22px 16px 20px}main{padding:20px 12px 40px}summary{padding-right:12px}.level-2>summary{padding-left:28px}.level-3>summary{padding-left:40px}.entries{padding:6px 12px 12px 48px}.sutta-link{font-size:17px}}
-</style>
-</head>
-<body>
-<header>
-  <div class="header-inner">
-    <h1>Pāli with Aṭṭhakattha reading</h1>
-    <div class="subtitle">Pāli text with PCED and Aṭṭhakathā reading support</div>
-  </div>
-</header>
-<main>
-  <p class="intro">Select a text below. The collection is arranged as a collapsible hierarchy so that more books and suttas can be added later.</p>
-  <section class="library" aria-label="Pāli reading library">
-    <details open class="level-1">
-      <summary>Suttapiṭaka</summary>
-      <details open class="level-2">
-        <summary>Dīghanikāya</summary>
-        <details open class="level-3">
-          <summary>Sīlakkhandavaggapāli (Partial)</summary>
-          <div class="entries">
-            <a class="sutta-link" href="kutadantasutta.html">
-              5. Kūṭadantasutta
-              <span class="meta">Pāli + PCED + Aṭṭhakathā</span>
-            </a>
-          </div>
-        </details>
-      </details>
-    </details>
-  </section>
-</main>
-<footer>More Pāli texts can be added to this index as the project expands.</footer>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pāli with Aṭṭhakattha reading</title><style>
+:root{--brown:#96613f;--brown-dark:#6f452c;--brown-light:#efe2d6;--cream:#fffaf5;--text:#2f2925;--muted:#76685e;--line:#decbbd;--card:#fff}*{box-sizing:border-box}body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--cream);color:var(--text)}header{background:var(--brown);color:#fff;padding:24px 22px 21px;box-shadow:0 2px 8px #0002}.header-inner{max-width:1000px;margin:auto}h1{margin:0;font-size:clamp(28px,5vw,44px);line-height:1.15}.subtitle{margin-top:7px;font:14px Arial,sans-serif;opacity:.9}main{max-width:1000px;margin:auto;padding:28px 18px 50px}.intro{font:15px Arial,sans-serif;color:var(--muted);margin:0 0 20px}.library{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 4px 18px #49301b0f}details{border-top:1px solid var(--line)}details:first-child{border-top:0}summary{list-style:none;cursor:pointer;padding:15px 18px;font:700 17px Arial,sans-serif;display:flex;align-items:center;gap:10px;background:#fff}summary::-webkit-details-marker{display:none}summary::before{content:'▸';width:16px;color:var(--brown);transition:.16s}details[open]>summary::before{transform:rotate(90deg)}details[open]>summary{background:#fcf6f0}.level-2>summary{padding-left:34px}.level-3>summary{padding-left:50px}.entries{padding:7px 18px 14px 66px;background:#fffdfb;display:grid;gap:8px}.sutta-link{display:block;text-decoration:none;color:var(--brown-dark);font-size:18px;font-weight:700;padding:11px 14px;border:1px solid var(--line);border-radius:9px;background:#fff}.sutta-link:hover{background:var(--brown-light)}.sutta-no{display:inline-block;min-width:30px}.meta{display:block;margin-top:3px;font:13px Arial,sans-serif;color:var(--muted)}footer{max-width:1000px;margin:auto;padding:0 18px 28px;text-align:center;font:12px Arial,sans-serif;color:#8a7b70}@media(max-width:600px){main{padding:20px 10px 40px}.entries{padding-left:44px}.level-3>summary{padding-left:38px}}
+</style></head><body><header><div class="header-inner"><h1>Pāli with Aṭṭhakattha reading</h1><div class="subtitle">Pāli text with PCED and Aṭṭhakathā reading support</div></div></header><main><p class="intro">Select a text below. The collection is arranged as a collapsible hierarchy.</p><section class="library"><details open class="level-1"><summary>Suttapiṭaka</summary><details open class="level-2"><summary>Dīghanikāya</summary><details open class="level-3"><summary>Sīlakkhandhavaggapāḷi</summary><div class="entries"><a class="sutta-link" href="brahmajalasutta.html"><span class="sutta-no">1.</span> Brahmajālasutta<span class="meta">Pāli + PCED + Aṭṭhakathā</span></a>
+<a class="sutta-link" href="samannaphalasutta.html"><span class="sutta-no">2.</span> Sāmaññaphalasutta<span class="meta">Pāli + PCED + Aṭṭhakathā</span></a>
+<a class="sutta-link" href="ambatthasutta.html"><span class="sutta-no">3.</span> Ambaṭṭhasutta<span class="meta">Pāli + PCED + Aṭṭhakathā</span></a>
+<a class="sutta-link" href="sonadandasutta.html"><span class="sutta-no">4.</span> Soṇadaṇḍasutta<span class="meta">Pāli + PCED + Aṭṭhakathā</span></a>
+<a class="sutta-link" href="kutadantasutta.html"><span class="sutta-no">5.</span> Kūṭadantasutta<span class="meta">Pāli + PCED + Aṭṭhakathā</span></a>
+<a class="sutta-link" href="mahalisutta.html"><span class="sutta-no">6.</span> Mahālisutta<span class="meta">Pāli + PCED + Aṭṭhakathā</span></a>
+<a class="sutta-link" href="jaliyasutta.html"><span class="sutta-no">7.</span> Jāliyasutta<span class="meta">Pāli + PCED + Aṭṭhakathā</span></a>
+<a class="sutta-link" href="mahasihanadasutta.html"><span class="sutta-no">8.</span> Mahāsīhanādasutta<span class="meta">Pāli + PCED + Aṭṭhakathā</span></a>
+<a class="sutta-link" href="potthapadasutta.html"><span class="sutta-no">9.</span> Poṭṭhapādasutta<span class="meta">Pāli + PCED + Aṭṭhakathā</span></a>
+<a class="sutta-link" href="subhasutta.html"><span class="sutta-no">10.</span> Subhasutta<span class="meta">Pāli + PCED + Aṭṭhakathā</span></a>
+<a class="sutta-link" href="kevattasutta.html"><span class="sutta-no">11.</span> Kevaṭṭasutta<span class="meta">Pāli + PCED + Aṭṭhakathā</span></a>
+<a class="sutta-link" href="lohiccasutta.html"><span class="sutta-no">12.</span> Lohiccasutta<span class="meta">Pāli + PCED + Aṭṭhakathā</span></a>
+<a class="sutta-link" href="tevijjasutta.html"><span class="sutta-no">13.</span> Tevijjasutta<span class="meta">Pāli + PCED + Aṭṭhakathā</span></a></div></details></details></details></section></main><footer>Sīlakkhandhavagga: 13 suttas with linked Aṭṭhakathā reading.</footer></body></html>
